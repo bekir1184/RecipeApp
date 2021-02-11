@@ -32,14 +32,16 @@
                 android:padding="5dp"
                 android:orientation="vertical">
                 <TextView
+                    android:gravity="center"
+                    android:textSize="20sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Recipe Label"
                     android:textColor="@color/white"
-                    android:textSize="30dp"
                     android:id="@+id/recipeLabel"
                     />
                 <LinearLayout
+                    android:layout_gravity="center"
                     android:layout_margin="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -61,28 +63,7 @@
                         android:textColor="@color/white"
                         />
                 </LinearLayout>
-                <LinearLayout
-                    android:layout_margin="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <TextView
-                        android:layout_weight=".50"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Diet label:"
-                        android:textColor="@color/white"
-                        android:gravity="center"/>
-                    <TextView
-                        android:id="@+id/dietlabel"
-                        android:layout_weight=".50"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="721.5"
-                        android:textColor="@color/white"
-                        />
-                </LinearLayout>
+
                 <Button
                     android:id="@+id/viewRecipe"
                     android:layout_width="match_parent"

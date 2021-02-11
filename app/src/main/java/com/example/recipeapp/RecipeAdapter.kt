@@ -34,13 +34,11 @@ class RecipeAdapter(val recipes : ArrayList<Recipe>, val context: Context) : Rec
     class RecipeViewHolder(view: View): RecyclerView.ViewHolder(view){
         val recipeLabel : TextView = itemView.findViewById(R.id.recipeLabel)
         val calories :TextView = itemView.findViewById(R.id.calories)
-        val dietlabel:TextView = itemView.findViewById(R.id.dietlabel)
         val recipeimg:ImageView =itemView.findViewById(R.id.recipeimg)
         val button :Button =itemView.findViewById(R.id.viewRecipe)
         fun bindItem(item: Recipe, context: Context){
             recipeLabel.setText(item.label)
-            calories.setText(item.label)
-            dietlabel.setText(item.label)
+            calories.setText(String.format("%.2f",item.calories))
             Picasso.get().load(item.image).resize(250,250).centerCrop().into(recipeimg)
             button.setOnClickListener({
                 val i = Intent(Intent.ACTION_VIEW)
